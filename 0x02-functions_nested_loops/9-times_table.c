@@ -6,14 +6,17 @@
 
 void times_table(void)
 {
-	int i, j, k;
+	int num, mult, prod;
 
-	for (i = 0; i <= 9; i++)
+	for (num = 0; num <= 9; num++)
 	{
-
-		for (j = 0; j <= 9; j++)
+ 		_putchar(48);
+		for (mult = 1; mult <= 9; mult++)
 		{
-			k = i * j;
+			_putchar(',')
+			_putchar(' ')
+
+			prod = num * mult;	
 
 			if (k <= 9)
 			{
@@ -21,15 +24,9 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar((k / 10) + '0');
+				_putchar((	k / 10) + '0');
 			}
 			_putchar((k % 10) + '0');
-
-			if (j != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
 
 		_putchar('\n');
